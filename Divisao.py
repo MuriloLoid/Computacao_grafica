@@ -1,6 +1,7 @@
 from pdf2image import convert_from_path
 import os
 
+poppler_path = r'C:\Users\aluno\Downloads\Release-25.07.0-0\poppler-25.07.0\Library\bin'
 pdf_path = "enem2024.pdf"
 output_folder = "imagens"
 
@@ -18,6 +19,7 @@ try:
         output_folder=output_folder,
         fmt="png",
         paths_only=False,
+        poppler_path=poppler_path
     )
     
     for i, image in enumerate(images):
